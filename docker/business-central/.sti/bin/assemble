@@ -21,8 +21,9 @@ rm jboss-brms*
 ./bin/add-user.sh -a --user $BUSINESS_CENTRAL_USER --password $BUSINESS_CENTRAL_PASSWORD --role admin,rest-all
 
 mkdir $HOME/gitrepo
-#mv /tmp/src/rules/.niogit $HOME/gitrepo/.
-
+mkdir $HOME/tmprepo
+mv /tmp/src/rules/.niogit $HOME/tmprepo/.
+chmod 666 -R $HOME/tmprepo
 
 mv /tmp/src/hookScripts/prepopulateNioGit.sh $HOME/.
 
@@ -36,3 +37,5 @@ mv /tmp/src/conf/settings.xml $HOME/.
 
 # Call default assemble script
 /usr/local/s2i/assemble
+
+rm -rf $HOME/.m2
