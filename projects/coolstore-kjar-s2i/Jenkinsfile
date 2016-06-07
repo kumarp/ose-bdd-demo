@@ -26,7 +26,7 @@ node {
             sh """
                 mkdir -p ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/deployments
                 mv ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/*.jar ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/deployments/
-		mkdir  mkdir -p ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/.sti
+		mkdir -p ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/.sti
 		cp ${WORKSPACE}/projects/coolstore-kjar-s2i/version.properties ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build/.sti/environment
                 tar -cvf ${WORKSPACE}/projects/coolstore-kjar-s2i/target/coolstore.tar -C ${WORKSPACE}/projects/coolstore-kjar-s2i/target/s2i-build .
                 """
