@@ -23,7 +23,6 @@ rm jboss-brms*
 mkdir $HOME/gitrepo
 mkdir $HOME/tmprepo
 mv /tmp/src/rules/.niogit $HOME/tmprepo/.
-chmod 666 -R $HOME/tmprepo
 
 mv /tmp/src/hookScripts/prepopulateNioGit.sh $HOME/.
 
