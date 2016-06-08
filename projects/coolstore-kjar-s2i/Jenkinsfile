@@ -13,10 +13,8 @@ node {
 
        sh """
            cd ${WORKSPACE}/projects/coolstore-kjar-s2i
-       full_version=$(cat version.properties)
-       parsed_version=${full_version:33}
            ${mvnHome}/bin/mvn clean org.apache.maven.plugins:maven-dependency-plugin:copy -Dartifact=com.redhat:coolstore:${parsed_version} -Dmdep.stripVersion=true -DoutputDirectory=target/s2i-build
-       """
+           """
 
 
     stage 'OpenShift Build'
