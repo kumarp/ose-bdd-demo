@@ -116,9 +116,13 @@ while [ $COUNTER -lt $MAX_COUNTER ]
 do
     
     RC_NAME=${APP}-${LATEST_DC_VERSION}
+
+    echo "curling"
     
     RC=$(curl -s -f -H "Authorization: Bearer ${TOKEN}" --insecure  https://${HOST}:${PORT}/api/v1/namespaces/${NAMESPACE}/replicationcontrollers/${RC_NAME})
     
+    echo "curl done"
+
     RC_STATUS=$(echo "$RC" | jq -r '.metadata.annotations["openshift.io/deployment.phase"]')
     
 	# Check if build succeeded or failed
@@ -161,7 +165,8 @@ do
       echo "Max Validation Attempts Exceeded. Failed Verifying Application Deployment..."
       exit 1
     fi
-
+        echo "sleeping"
 	sleep $DELAY
+	echo "sleep done"
 
 done
