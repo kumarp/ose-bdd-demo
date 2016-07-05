@@ -1,0 +1,12 @@
+{
+  "name": "brms-coolstore-demo",
+  "description": "A simple web-base store application",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-route": "1.5.x",
+    "patternfly": "^3.5.0"
+  }
+}

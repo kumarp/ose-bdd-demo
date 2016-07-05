@@ -1,0 +1,15 @@
+{
+  "name": "brms-coolstore-demo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A simple store app",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "1.7.x"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+    "express": "4.13.x"
+  }
+}
