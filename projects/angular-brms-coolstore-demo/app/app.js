@@ -5,13 +5,14 @@
 var app = angular.module('coolstoreApp', [
 	'homeModule',
 	'ngRoute',
-	'kie.server.service'
+	'kie.server.service',
+	'itemDetailsDirective'
 ]);
 
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider
 		.when('/',{
-			templateUrl: 'templates/home.html',
+			templateUrl: 'app/templates/home.html',
 			controller: 'HomeCtrl',
 			controllerAs: 'homeCtrl'
 		});
