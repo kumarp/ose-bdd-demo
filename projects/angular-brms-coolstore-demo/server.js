@@ -3,7 +3,11 @@ var bodyParser = require("body-parser");
 var http = require("http");
 var app = express();
 var hostname="localhost";
+var port=8080;
 var containerName="coolstore3";
+
+//TODO
+//Figure out Basic Auth
 
 //Mount dependencies
 app.use(express.static(__dirname+'/'));
@@ -23,7 +27,7 @@ app.post('/api/v1/rest/checkout', function (req, res) {
 
 	var options = {
 	  hostname: hostname,
-	  port: 8080,
+	  port: port,
 	  path: '/kie-server/services/rest/server/containers/instances/'+containerName,
 	  method: 'POST',
 	  headers: {
