@@ -10,5 +10,6 @@ bin/
 .classpath
 .project
 .settings
-projects/angular-brms-coolstore-demo/node_modules/
+projects/angular-brms-coolstore-demo/node_modules/*
+!projects/angular-brms-coolstore-demo/node_modules/patternfly
 projects/angular-brms-coolstore-demo/app/components/
