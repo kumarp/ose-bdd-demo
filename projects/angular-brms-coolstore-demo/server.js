@@ -63,7 +63,7 @@ app.post('/api/v1/rest/checkout', function (req, res) {
     // console.log(xmlHttp.responseText);
 });
 
-app.listen(3000, function () {
+app.listen(8080, function () {
 	console.log("Started coolstore-app listening on port 3000");
 });
 
